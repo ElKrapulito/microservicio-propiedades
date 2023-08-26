@@ -9,8 +9,6 @@ export class Property extends AggregateRoot {
   photos: Photo[];
   comodities: string[];
   rules: string[];
-  checkIn: Date;
-  checkOut: Date;
 
   constructor(
     owner: User,
@@ -19,8 +17,6 @@ export class Property extends AggregateRoot {
     photos: Photo[],
     comodities: string[],
     rules: string[],
-    checkIn: Date,
-    checkOut: Date,
   ) {
     super();
     this.id = crypto.randomUUID();
@@ -30,7 +26,5 @@ export class Property extends AggregateRoot {
     this.photos = photos;
     this.comodities = comodities;
     this.rules = rules;
-    this.checkIn = checkIn;
-    this.checkOut = checkOut;
   }
 }

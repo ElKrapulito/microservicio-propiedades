@@ -1,9 +1,7 @@
 import { Model } from 'mongoose';
-import { Injectable } from '@nestjs/common';
-import { IRepository } from 'nurbnb-kernel/src/core/iRepository';
 import { AggregateRoot } from '../../../nurbnb-kernel/src/core/aggregateRoot';
+import { IRepository } from '../../../nurbnb-kernel/src/core/iRepository';
 
-@Injectable()
 export abstract class BaseRepository<T extends AggregateRoot>
   implements IRepository<T>
 {
